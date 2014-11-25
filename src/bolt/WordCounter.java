@@ -1,5 +1,6 @@
 package bolt;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -26,6 +27,7 @@ public class WordCounter implements IRichBolt {
 		this.collector = collector;
 		this.name = context.getThisComponentId();
 		this.id = context.getThisTaskId();
+		wordCounts = new HashMap<String , Integer>();
 	}
 
 	@Override
